@@ -1,0 +1,36 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Spark
+spark-warehouse/
+metastore_db/
+.ivy2/
+checkpoints/

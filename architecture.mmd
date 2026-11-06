@@ -1,0 +1,11 @@
+flowchart LR
+    P["Python producer<br/>src/producer.py"] -->|"JSON events"| K["Kafka topic<br/>ecommerce-events"]
+    K -->|"Kafka source"| S["Spark Structured Streaming"]
+    S --> V["Parse + validate"]
+    V --> W["Event-time windows<br/>10 seconds / 5-second watermark"]
+    W --> A["Aggregate<br/>event_type + region"]
+    A -->|"JDBC staging batch"| STG[("PostgreSQL staging table")]
+    STG --> UPSERT["foreachBatch upsert"]
+    UPSERT --> DB[("streamforge_event_metrics")]
+    DB --> D["Streamlit dashboard"]
+    D --> KPI["KPIs, charts,<br/>latest aggregates"]

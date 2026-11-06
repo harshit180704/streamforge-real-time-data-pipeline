@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StreamForge Ecommerce Event",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_type",
+    "event_time",
+    "user_id",
+    "product_id",
+    "category",
+    "region",
+    "quantity",
+    "unit_price",
+    "amount",
+    "currency"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "event_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "product_view",
+        "add_to_cart",
+        "purchase",
+        "payment_failed",
+        "inventory_update"
+      ]
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "unit_price": {
+      "type": "number",
+      "minimum": 0
+    },
+    "amount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "currency": {
+      "type": "string",
+      "const": "INR"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "string"
+    },
+    "failure_reason": {
+      "type": "string"
+    },
+    "inventory_delta": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false
+}
