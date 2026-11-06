@@ -246,3 +246,25 @@ Do **not** add `-v` unless you intentionally want to delete the persistent Postg
 - Developed a Streamlit analytics dashboard for event volume, regional activity, gross sales, and aggregation-window trends.
 
 Use these bullets only while the described implementation remains present in the repository. Do not claim production scale, exactly-once delivery, high availability, or real customer data.
+
+## Dashboard screenshots
+
+These captures show the local dashboard after synthetic events were produced, streamed, aggregated, and stored.
+
+<details>
+<summary>View dashboard screenshots</summary>
+
+![Dashboard capture 1](ss/Screenshot%202026-11-06%20201825.png)
+
+![Dashboard capture 2](ss/Screenshot%202026-11-06%20201836.png)
+
+![Dashboard capture 3](ss/Screenshot%202026-11-06%20201851.png)
+
+![Dashboard capture 4](ss/Screenshot%202026-11-06%20201858.png)
+
+![Dashboard capture 5](ss/Screenshot%202026-11-06%20201910.png)
+
+</details>
+
+The editable Mermaid architecture source is available in [architecture.mmd](architecture.mmd).
+
